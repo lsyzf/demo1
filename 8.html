@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body ng-controller="myCon">
+<div>
+<div>
+ng-model选中：
+<select ng-model="myPet">
+<option value="">我的宠物</option>
+<option ng-repeat="v in animalArr">{{ v }}</option>
+</select>
+ng-selected选中：
+<select>
+<option value="">你的宠物</option>
+<option ng-repeat="v in animalArr" ng-selected="yourPet == v">{{ v }}</option>
+</select>
+ng-options:选中：
+<select ng-model="taPet" ng-options="v for v in animalArr">
+<option value="">Ta的宠物</option>
+</select>
+</div>
+</div>
+<script src="../../../../node_modules/angular/angular.min.js"></script>
+<script src="../js/app7.js"></script>
+<script src="../js/controller17.js"></script>
+</body>
+</html> 
